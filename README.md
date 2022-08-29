@@ -60,13 +60,42 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        random_state=12345, splitter='best')`
 ```
 ### Quantitative Analysis
+#### Metrics used to evaluate final model - AUC and AIR **<br>
 
-* **Metrics used to evaluate final model - AUC and AIR**<br>
-    *    Training AUC: 0.784<br>
-    *    Validation AUC: 0.750<br>
-    *    Test AUC: 0.744<br>
-    *    Hispanic-to-White AIR: 0.833<br>
+| Tr AUC | Val AUC | Test AUC |
+| ------ | ------- | -------- |
+| 0.3456 | 0.7891  | 0.7687 |
 
-### State the final values, neatly -- as bullets or a table, of the metrics for all data:training, validation, and test data
+#### Correlation Heatmap
+![Correlation Heatmap](heatmap.png)
+
+#### State the final values, neatly -- as bullets or a table, of the metrics for all data:training, validation, and test data
+
+
+* **The AUC value and picture** <br>
+    * The picture of AUC value<br>
+   
+![AUC value](iteration AUC (training and validation).png)
+  The table of AUC Value.
+| No | Training AUC	| Validation AUC | 5-Fold SD |
+| -- | ------------ | -------------- | --------- |
+| 1	| 0.645748	| 0.643880 | 0.009275 |
+| 2	| 0.699912	| 0.687752 | 0.012626 |
+| 3	| 0.742968	| 0.729490	| 0.017375 |
+| 4	| 0.757178	| 0.741696	| 0.017079 |
+| 5	| 0.769331	| 0.742480	| 0.019886 |
+| 6 | 0.783722	| 0.749610	| 0.017665 |
+| 7	| 0.795777	| 0.742115	| 0.022466 |
+| 8	| 0.807291	| 0.739990	| 0.015567 |
+| 9	| 0.822913	| 0.727224	| 0.012042 |
+| 10	| 0.838052	| 0.720562	| 0.013855 |
+| 11	| 0.855168	| 0.709864	| 0.010405 |
+| 12	| 0.874251	| 0.688074	| 0.008073 |
+<br>
+As can be seen from the above chart, the effective AUC reaches the highest value of 0.749610 at No.6, so we use 6 depths for human interpertation desion tree.<br>
+
+The desion tree pciture.
+![Desion tree](desion tree.png)
 
 ### Provide any plots related to your data or final model 
+ta or final model 

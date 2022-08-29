@@ -113,7 +113,9 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
 <br>
 #### Iteration AUC 
 ![AUC value](iterationAUC.png)
-
+<br>
+#### AUC table
+![AUC](AUC.jpg)
 <br>
 #### Desion tree
 ![Desion tree](desiontree.png)
@@ -121,7 +123,17 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
 #### variableplot
 ![variableplot](variableplot.png)
 <br>
+#### matrices across race groups
+![matrices across race groups](race.jpg)
+![matrices across race groups air](raceAIR.jpg)
+<br>
+#### matrices across sex groups
+![matrices across sex groups](sex.jpg)
+<br>
+#### AIR and confusion matrices at different cutoff
+![ AIR and confusion matrices at different cutoff](white.jpg)
+<br>
 #### Iteration of hispanic-to-white AIR
 ![iteration](iterationAIC.png)
 <br>
-#### 
+

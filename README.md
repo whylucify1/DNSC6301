@@ -75,7 +75,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 * **The AUC value and picture** <br>
     * The picture of AUC value<br>
    
-![AUC value](iteration AUC (training and validation).png)
+![AUC value](AUC.png)
   The table of AUC Value.
 | No | Training AUC	| Validation AUC | 5-Fold SD |
 | -- | ------------ | -------------- | --------- |
@@ -95,7 +95,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 As can be seen from the above chart, the effective AUC reaches the highest value of 0.749610 at No.6, so we use 6 depths for human interpertation desion tree.<br>
 
 The desion tree pciture.
-![Desion tree](desion tree.png)
+![Desion tree](desiontree.png)
 
 ### Provide any plots related to your data or final model 
 ta or final model 

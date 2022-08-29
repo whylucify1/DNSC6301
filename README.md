@@ -138,3 +138,13 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
 ![iteration](iterationAIC.png)
 <br>
 
+
+### Ethical considerations 
+* Describe potential negative impacts of using your model:
+    * Math or software problems
+    * Real-world risks: who, what, when or how 
+    When analyzing data, sometimes there will be some extreme data, missing data or invalid data. These extreme values of data will disturb our analysis and cause errors in our analysis results, so we need to analyze the data first when analyzing the data. and cleaning.
+* Describe potential uncertainties relating to the impacts of using your mode.
+    * Math or software problems
+    * Real-world risks: who, what, when or how?
+* Describe any unexpected or results

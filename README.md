@@ -99,7 +99,7 @@ As can be seen from the above chart, the effective AUC reaches the highest value
 ![Desion tree](desiontree.png)
 <br>
 We can get from the later tests that Pay_0 is the most important indicator.<br>
-####variableplot
+#### variableplot
 ![variableplot](variableplot.png)
 <br>
  
@@ -113,3 +113,15 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
 <br>
 #### Iteration AUC 
 ![AUC value](iterationAUC.png)
+
+<br>
+#### Desion tree
+![Desion tree](desiontree.png)
+<br>
+#### variableplot
+![variableplot](variableplot.png)
+<br>
+#### Iteration of hispanic-to-white AIR
+![iteration](iterationAIC.png)
+<br>
+#### 

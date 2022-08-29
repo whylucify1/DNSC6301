@@ -74,7 +74,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 * **The AUC value and picture** <br>
     * The picture of AUC value<br>
-   
+####  Iteration AUC 
 ![AUC value](iterationAUC.png)
 <br>
   The table of AUC Value.
@@ -95,11 +95,17 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 <br>
 As can be seen from the above chart, the effective AUC reaches the highest value of 0.749610 at No.6, so we use 6 depths for human interpertation desion tree.<br>
 
-The desion tree pciture.
+####Desion tree
 ![Desion tree](desiontree.png)
 <br>
-We can get from the later tests that Pay_0 is the most important indicator.
-
+We can get from the later tests that Pay_0 is the most important indicator.<br>
+####variableplot
 ![variableplot](variableplot.png)
+<br>
+ 
+ At the same time, in the following test, we classify the race and we know the hispanic-to-white AIR is highest. SO we have another iteration plot.<br>
+#### iteration of hispanic-to-white AIR
+ ![iteration](iterationAIC.png)
+ 
 ### Provide any plots related to your data or final model 
 ta or final model 

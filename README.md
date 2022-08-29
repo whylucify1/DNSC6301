@@ -126,7 +126,7 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
 #### matrices across race groups
 ![matrices across race groups](race.jpg)
 <br>
-![matrices across race groups air](raceAIR.jpg)
+![matrices across race groups air](riceAIR.jpg)
 <br>
 #### matrices across sex groups
 ![matrices across sex groups](sex.jpg)

@@ -108,4 +108,8 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
  ![iteration](iterationAIC.png)
  
 ### Provide any plots related to your data or final model 
-ta or final model 
+#### Correlation Heatmap
+![Correlation Heatmap](heatmap.png)
+<br>
+#### Iteration AUC 
+![AUC value](iterationAUC.png)

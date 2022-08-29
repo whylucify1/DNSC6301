@@ -141,10 +141,15 @@ We can get from the later tests that Pay_0 is the most important indicator.<br>
 
 ### Ethical considerations 
 * Describe potential negative impacts of using your model:
-    * Math or software problems
-    * Real-world risks: who, what, when or how 
-    When analyzing data, sometimes there will be some extreme data, missing data or invalid data. These extreme values of data will disturb our analysis and cause errors in our analysis results, so we need to analyze the data first when analyzing the data. and cleaning.
+    * Math or software problems<br>
+      When analyzing data, sometimes there will be some extreme data, missing data or invalid data. These extreme values of data will disturb our analysis and cause errors in our analysis results, so we need to analyze the data first when analyzing the data. and cleaning.
+    * Real-world risks: who, what, when or how <br>
+    According to the model analysis, the most important factors affecting the judgment are whether the first repayment (PAY_0) and race are the most important. Therefore, if someone knows the basis for the judgment of the model, they can obtain illegal purposes through special means, such as through the first Repayment on time to increase the loan amount, but this is risky for the bank, and there are also certain loopholes for the model.
+
 * Describe potential uncertainties relating to the impacts of using your mode.
-    * Math or software problems
-    * Real-world risks: who, what, when or how?
+    * Math or software problems<br>
+    Loss of data, noise, and insufficient data.
+    * Real-world risks: who, what, when or how?<br>
+    The model needs to be adjusted frequently according to the data and reality, so it is necessary to ensure the long-term observation of the model and the continuous replenishment of data.
 * Describe any unexpected or results
+ According to the results of the model, people who repay at PAY_0 have relatively good credit.

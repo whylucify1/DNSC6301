@@ -75,7 +75,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 * **The AUC value and picture** <br>
     * The picture of AUC value<br>
    
-![AUC value](AUC.png)
+![AUC value](iterationAUC.png)
+<br>
   The table of AUC Value.
 | No | Training AUC	| Validation AUC | 5-Fold SD |
 | -- | ------------ | -------------- | --------- |
@@ -96,6 +97,9 @@ As can be seen from the above chart, the effective AUC reaches the highest value
 
 The desion tree pciture.
 ![Desion tree](desiontree.png)
+<br>
+We can get from the later tests that Pay_0 is the most important indicator.
 
+![variableplot](variableplot.png)
 ### Provide any plots related to your data or final model 
 ta or final model 

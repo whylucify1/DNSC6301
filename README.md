@@ -73,13 +73,13 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
   * Black-to-White AIR: 0.85
   * Female-to-Male AIR: 1.02
   * Hispanic-to-White AIR: 0.83
+  * After we change the cutoff from 0.2 to 0.18 the AIR of after change cutoff the AIR of "hispanic-to-white" and "black-to-white AIR" are both higher than cutoff = 0.2. but the AIR of "female-male" is decline. <br>
 * **Correlation Heatmap**
 ![Correlation Heatmap](heatmap1.png)
   * From this heatmap we can know that from the heatmap we can know the AMT is highly correlated other AMT, and the payment is highly correlated with otehr payment. It means if a people have a better payment in the history he will have a better payment in the future. <br> 
   * We also can know from this plot is the race havea negatively correlated with the final result, it means some people will be discrmination.<br>
 
 * **The table of AUC Value.** <br>
-  * The table of AUC: <br>
  
 | No | Training AUC	| Validation AUC | 5-Fold SD |
 | -- | ------------ | -------------- | --------- |
@@ -95,30 +95,29 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | 10	| 0.838052	| 0.720562	| 0.013855 |
 | 11	| 0.855168	| 0.709864	| 0.010405 |
 | 12	| 0.874251	| 0.688074	| 0.008073 |
-<br>
+* **The table of AUC**: <br>
   * From the table we can know  AUC is the highest when the depth = 6, so we choose the 6 depth to build a decision tree.<br>
 * **The desicion tree.**<br>
 ![decisiontree](desiontree.png)
+* **The variable importances.**<br>
+![variable importances](VI.png)
+   * From the plot of variable inmportances we can know that the most 2 important factor is PAY_0 and PAY_2 , so if a person can pau their bill on that month most of them will pay the bill next month.<br>
+* **Final Iteration Plot**<br>
+![Final Iteration Plot](iterationAIC.png)
+   * From the plot show the relation of three factor the Training AUC, the Validation AUC, and the Hispanic-to-White AIR. We also choose the depth = 6 because the 6 is the best choice of the depth.
  
  
 ## Ethical considerations 
-* Describe potential negative impacts of using your model:
-    * Math or software problems
-    <br>
-      When analyzing data, sometimes there will be some extreme data, missing data or invalid data. These extreme values of data will disturb our analysis and cause errors in our analysis results, so we need to analyze the data first when analyzing the data. and cleaning.
-
-    * Real-world risks: who, what, when or how <br>
-
-    According to the model analysis, the most important factors affecting the judgment are whether the first repayment (PAY_0) and race are the most important. Therefore, if someone knows the basis for the judgment of the model, they can obtain illegal purposes through special means, such as through the first Repayment on time to increase the loan amount, but this is risky for the bank, and there are also certain loopholes for the model.
-* Describe potential uncertainties relating to the impacts of using your mode.
-    * Math or software problems<br>
-
-    Loss of data, noise, and insufficient data.
-
-    * Real-world risks: who, what, when or how?<br>
-
-    The model needs to be adjusted frequently according to the data and reality, so it is necessary to ensure the long-term observation of the model and the continuous replenishment of data.
-
-* Describe any unexpected or results
-
- According to the results of the model, people who repay at PAY_0 have relatively good credit.
+* **Describe potential negative impacts of using your model:**
+    * **Math or software problems**：
+In fact, there are more dimensions to analyze the table, but this time we only analyzed from race and sex. For example, we can introduce education level for analysis.
+    * **Real-world risks(who, what, when or how):**
+According to the results of our analysis, this result has a clear bias for race yy, and in the same situation, whites have higher credit limits than blacks and Hispanic whites. This model may have problems of racial discrimination, and there are greater security and social and moral hidden dangers.<br>
+ 
+* **Describe potential uncertainties relating to the impacts of using your mode.**
+    * **Math or software problems**
+Even though after we change the cutoff the AUC and AIR values in this model are already higher than 0.8 but most of the data are between 0.8-0.9, the reliability of the data can continue to improve.<br>
+    * **Real-world risks(who, what, when or how?)：**
+Like other models, this model also has major overall problems. If the analysis logic of the model is obtained once attacked by hackers or other personnel, a higher credit limit can be obtained by predicting the results of the model in advance, which will give Society and banks cause huge losses.<br>
+* **Describe any unexpected or results**：
+I don't know why AIC can be fixed by doing a modification cutoff.

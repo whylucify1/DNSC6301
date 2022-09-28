@@ -5,14 +5,14 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
 * **Model data:** Aug,28,2022<br>
 * **Model version:** 1.0<br>
 * **License:** MIT<br>
-* **Model implementation code:**<https://github.com/whylucify1/DNSC6301/blob/main/python_6301.ipynb><br>
+* **Model implementation code:**[DNSC6301 assignment Haoyang Wang](https://github.com/whylucify1/DNSC6301/blob/main/python_6301.ipynb)<br>
 <p>
 
 ## Intended Use
 * <strong>Primary intended uses:</strong> This model is an example probability of default classifier, with an example use case for determining eligibility for a credit line increase.<br>
 * **Primary intended users:** The profosser Jphnston Hall.<br>
 * **Out-of-scope use cases:** Only use for profosser to check my assignment.<br>
-### Training Data
+## Training Data
 
 * Data dictionary: 
 
@@ -36,12 +36,12 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
   * Training rows: 15,000
   * Validation rows: 7,500
 
-### Test Data
+## Test Data
 * **Source of test data**: GWU Blackboard.
 * **Number of rows in test data**: 7,500
 * **State any differences in columns between training and test data**: None
 
-### Model details
+## Model details
 * **Columns used as inputs in the final model**: 'LIMIT_BAL',
        'PAY_0', 'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1',
        'BILL_AMT2', 'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6',
@@ -49,7 +49,7 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
 * **Column(s) used as target(s) in the final model**: 'DELINQ_NEXT'
 * **Type of model**: Decision Tree 
 * **Software used to implement the model**: Python, scikit-learn
-* **Version of the modeling software**: 0.22.2.post1
+* **Version of the modeling software**: Model version: 1.0
 * **Hyperparameters or other settings of your model**: 
 ```
 DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
@@ -59,17 +59,13 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        min_weight_fraction_leaf=0.0, presort='deprecated',
                        random_state=12345, splitter='best')`
 ```
-### Quantitative Analysis
-#### Metrics used to evaluate final model - AUC and AIR **<br>
+## Quantitative Analysis
+### Metrics used to evaluate final model - AUC and AIR **<br>
 
-| Tr AUC | Val AUC | Test AUC |
-| ------ | ------- | -------- |
-| 0.3456 | 0.7891  | 0.7687 |
+### Correlation Heatmap
+![Correlation Heatmap](heatmap1.png)
 
-#### Correlation Heatmap
-![Correlation Heatmap](heatmap.png)
-
-#### State the final values, neatly -- as bullets or a table, of the metrics for all data:training, validation, and test data
+### State the final values, neatly -- as bullets or a table, of the metrics for all data:training, validation, and test data
 
 
 * **The AUC value and picture** <br>
@@ -95,51 +91,9 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 <br>
 As can be seen from the above chart, the effective AUC reaches the highest value of 0.749610 at No.6, so we use 6 depths for human interpertation desion tree.<br>
 
-#### Desion tree
-![Desion tree](desiontree.png)
-<br>
-We can get from the later tests that Pay_0 is the most important indicator.<br>
-#### variableplot
-![variableplot](variableplot.png)
-<br>
  
- At the same time, in the following test, we classify the race and we know the hispanic-to-white AIR is highest. SO we have another iteration plot.<br>
-#### Iteration of hispanic-to-white AIR
- ![iteration](iterationAIC.png)
  
-### Provide any plots related to your data or final model 
-#### Correlation Heatmap
-![Correlation Heatmap](heatmap.png)
-<br>
-#### Iteration AUC 
-![AUC value](iterationAUC.png)
-<br>
-#### AUC table
-![AUC](AUC.jpg)
-<br>
-#### Desion tree
-![Desion tree](desiontree.png)
-<br>
-#### variableplot
-![variableplot](variableplot.png)
-<br>
-#### matrices across race groups
-![matrices across race groups](race.jpg)
-<br>
-![matrices across race groups air](riceAIR.jpg)
-<br>
-#### matrices across sex groups
-![matrices across sex groups](sex.jpg)
-<br>
-#### AIR and confusion matrices at different cutoff
-![ AIR and confusion matrices at different cutoff](white.jpg)
-<br>
-#### Iteration of hispanic-to-white AIR
-![iteration](iterationAIC.png)
-<br>
-
-
-### Ethical considerations 
+## Ethical considerations 
 * Describe potential negative impacts of using your model:
     * Math or software problems
     <br>

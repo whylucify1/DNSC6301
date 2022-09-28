@@ -78,7 +78,9 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
   * From this heatmap we can know that from the heatmap we can know the AMT is highly correlated other AMT, and the payment is highly correlated with otehr payment. It means if a people have a better payment in the history he will have a better payment in the future. <br> 
   * We also can know from this plot is the race havea negatively correlated with the final result, it means some people will be discrmination.<br>
 
-* **The table of AUC Value.**
+* **The table of AUC Value.** <br>
+  * The table of AUC: <br>
+ 
 | No | Training AUC	| Validation AUC | 5-Fold SD |
 | -- | ------------ | -------------- | --------- |
 | 1	| 0.645748	| 0.643880 | 0.009275 |
@@ -94,8 +96,9 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | 11	| 0.855168	| 0.709864	| 0.010405 |
 | 12	| 0.874251	| 0.688074	| 0.008073 |
 <br>
-As can be seen from the above chart, the effective AUC reaches the highest value of 0.749610 at No.6, so we use 6 depths for human interpertation desion tree.<br>
-
+  * From the table we can know  AUC is the highest when the depth = 6, so we choose the 6 depth to build a decision tree.
+ * **The desicion tree.** <br>
+![decisiontree](desiontree.png)
  
  
 ## Ethical considerations 

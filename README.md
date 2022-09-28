@@ -60,20 +60,25 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        random_state=12345, splitter='best')`
 ```
 ## Quantitative Analysis
-### Metrics used to evaluate final model - AUC and AIR **<br>
-
-### Correlation Heatmap
+* **Metrics used to evaluate final model - AUC and AIR**<br>
+  * Desion tree<br>
+  * Confusion metrics<br>
+  * AUC:  AUC reflects the validity of the data, and the higher the AUC value, the higher the validity of the data.<br>
+  * AIR： AIR is an ratio, calculates the adverse impact ratio as a quotient between protected and reference group acceptance rates.<br>
+* **The final values of the metrics for all data:**<br>
+  * Training AUC: 0.78
+  * Validation AUC: 0.75
+  * Test AUC: 0.74
+  * Asian-to-White AIR: 1.00
+  * Black-to-White AIR: 0.85
+  * Female-to-Male AIR: 1.02
+  * Hispanic-to-White AIR: 0.83
+* **Correlation Heatmap**
 ![Correlation Heatmap](heatmap1.png)
+  * From this heatmap we can know that from the heatmap we can know the AMT is highly correlated other AMT, and the payment is highly correlated with otehr payment. It means if a people have a better payment in the history he will have a better payment in the future. <br> 
+  * We also can know from this plot is the race havea negatively correlated with the final result, it means some people will be discrmination.<br>
 
-### State the final values, neatly -- as bullets or a table, of the metrics for all data:training, validation, and test data
-
-
-* **The AUC value and picture** <br>
-    * The picture of AUC value<br>
-#### Iteration AUC 
-![AUC value](iterationAUC.png)
-<br>
-  The table of AUC Value.
+* **The table of AUC Value.**
 | No | Training AUC	| Validation AUC | 5-Fold SD |
 | -- | ------------ | -------------- | --------- |
 | 1	| 0.645748	| 0.643880 | 0.009275 |

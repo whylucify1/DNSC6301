@@ -118,5 +118,5 @@ The relationship of three factors the Training AUC, the Validation AUC, and the 
     * **Real-world risks(who, what, when or how):** According to the results of our analysis, there is a clear bias against Hispanic and Black people.<br>
 * **Describe potential uncertainties relating to the impacts of using your mode.**
     * **Math or software problems**: We never know how the model will perfoirm in the future, and it needs to be monitored.<br>
-    * **Real-world risks(who, what, when or how?)：** This model was not tested for privacy and security issues. <br>
+    * **Real-world risks(who, what, when or how?)**: This model was not tested for privacy and security issues. <br>
 * **Describe any unexpected or results**： The training data contained no missing values, which is surprising. Also, `PAY_0` appeared too important for a stable model.

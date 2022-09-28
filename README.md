@@ -96,8 +96,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | 11	| 0.855168	| 0.709864	| 0.010405 |
 | 12	| 0.874251	| 0.688074	| 0.008073 |
 <br>
-  * From the table we can know  AUC is the highest when the depth = 6, so we choose the 6 depth to build a decision tree.
- * **The desicion tree.** <br>
+  * From the table we can know  AUC is the highest when the depth = 6, so we choose the 6 depth to build a decision tree.<br>
+* **The desicion tree.**<br>
 ![decisiontree](desiontree.png)
  
  

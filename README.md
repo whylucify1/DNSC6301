@@ -5,7 +5,7 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
 * **Model data:** Aug,28,2022 <br>
 * **Model version:** 1.0 <br>
 * **License:** MIT <br>
-* **Model implementation code:**[DNSC6301 assignment Haoyang Wang](https://github.com/whylucify1/DNSC6301/blob/main/python_6301.ipynb)<br>
+* **Model implementation code:** [DNSC6301 assignment Haoyang Wang](https://github.com/whylucify1/DNSC6301/blob/main/python_6301.ipynb)<br>
 <p>
 
 ## Intended Use

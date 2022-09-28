@@ -1,17 +1,18 @@
-# DNSC6301 G38609059 Model Card
+# DNSC6301 Model Card
 ## Basic Information
 * **Person and organization developing model:**
 Haoyang Wang, haoyang.wang@gmail.com <br>
-* **Model data:** Aug,28,2022<br>
-* **Model version:** 1.0<br>
-* **License:** MIT<br>
+* **Model data:** Aug,28,2022 <br>
+* **Model version:** 1.0 <br>
+* **License:** MIT <br>
 * **Model implementation code:**[DNSC6301 assignment Haoyang Wang](https://github.com/whylucify1/DNSC6301/blob/main/python_6301.ipynb)<br>
 <p>
 
 ## Intended Use
 * <strong>Primary intended uses:</strong> This model is an example probability of default classifier, with an example use case for determining eligibility for a credit line increase.<br>
-* **Primary intended users:** The profosser Jphnston Hall and writer Haoyang Wang .<br>
+* **Primary intended users:** The profosser Johnston Hall and writer Haoyang Wang .<br>
 * **Out-of-scope use cases:** Any use beyond an educational example is out-of-scope.<br>
+
 ## Training Data
 
 * Data dictionary: 
@@ -30,14 +31,14 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
 | **PAY_AMT1 - PAY_AMT6** | inputs | float | amount of previous payment; PAY_AMT1 = amount paid in September, 2005; PAY_AMT2 = amount paid in August, 2005; ...; PAY_AMT6 = amount paid in April, 2005 |
 | **DELINQ_NEXT**| target | int | whether a customer's next payment is delinquent (late), 1 = late; 0 = on-time |
 
-* **Source of training data**: GWU Blackboard.
+* **Source of training data**: GWU Blackboard, contact jphall@gwu.edu for access.
 * **How training data was divided into training and validation data**: 50% training, 25% validation, 25% test
 * **Number of rows in training and validation data**:
   * Training rows: 15,000
   * Validation rows: 7,500
 
 ## Test Data
-* **Source of test data**: GWU Blackboard.
+* **Source of test data**: GWU Blackboard, contact jphall@gwu.edu for access.
 * **Number of rows in test data**: 7,500
 * **State any differences in columns between training and test data**: None
 
@@ -49,7 +50,9 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
 * **Column(s) used as target(s) in the final model**: 'DELINQ_NEXT'
 * **Type of model**: Decision Tree 
 * **Software used to implement the model**: Python, scikit-learn
-* **Version of the modeling software**: Model version: 1.0
+* **Version of the modeling software**: 
+  * Python version: 3.7.14
+  * sklearn version: 1.0.2
 * **Hyperparameters or other settings of your model**: 
 ```
 DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
@@ -60,11 +63,11 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        random_state=12345, splitter='best')`
 ```
 ## Quantitative Analysis
+
 * **Metrics used to evaluate final model - AUC and AIR**<br>
-  * Desion tree<br>
-  * Confusion metrics<br>
-  * AUC:  AUC reflects the validity of the data, and the higher the AUC value, the higher the validity of the data.<br>
-  * AIR： AIR is an ratio, calculates the adverse impact ratio as a quotient between protected and reference group acceptance rates.<br>
+  * AUC: AUC reflects the validity of the model, and the higher the AUC value, the higher the validity of the model.<br>
+  * AIR：Adverse impact ratio (AIR) is a quotient between protected and reference group acceptance rates.<br>
+  
 * **The final values of the metrics for all data:**<br>
   * Training AUC: 0.78
   * Validation AUC: 0.75
@@ -73,11 +76,11 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
   * Black-to-White AIR: 0.85
   * Female-to-Male AIR: 1.02
   * Hispanic-to-White AIR: 0.83
-  * After we change the cutoff from 0.2 to 0.18 the AIR of after change cutoff the AIR of "hispanic-to-white" and "black-to-white AIR" are both higher than cutoff = 0.2. but the AIR of "female-male" is decline. <br>
+
 * **Correlation Heatmap**
 ![Correlation Heatmap](heatmap1.png)
-  * From this heatmap we can know that from the heatmap we can know the AMT is highly correlated other AMT, and the payment is highly correlated with otehr payment. It means if a people have a better payment in the history he will have a better payment in the future. <br> 
-  * We also can know from this plot is the race havea negatively correlated with the final result, it means some people will be discrmination.<br>
+ * From this heatmap we can know that AMT is highly correlated other AMT, and the payment is highly correlated with otehr payment. <br> 
+ * We also can know from this plot that race has a negative correlation with the final result, it means some people will experience discrmination.<br>
 
 * **The table of AUC Value.** <br>
  
@@ -95,29 +98,25 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | 10	| 0.838052	| 0.720562	| 0.013855 |
 | 11	| 0.855168	| 0.709864	| 0.010405 |
 | 12	| 0.874251	| 0.688074	| 0.008073 |
-* **The table of AUC**: <br>
-  * From the table we can know  AUC is the highest when the depth = 6, so we choose the 6 depth to build a decision tree.<br>
+
+From the table we can know  AUC is the highest when the depth = 6, so we choose the 6 depth to build a decision tree.<br>
+
 * **The desicion tree.**<br>
 ![decisiontree](desiontree.png)
-* **The variable importances.**<br>
-![variable importances](VI.png)
-   * From the plot of variable inmportances we can know that the most 2 important factor is PAY_0 and PAY_2 , so if a person can pau their bill on that month most of them will pay the bill next month.<br>
+
+Final decision tree model.
+
 * **Final Iteration Plot**<br>
 ![Final Iteration Plot](iterationAIC.png)
-   * From the plot show the relation of three factor the Training AUC, the Validation AUC, and the Hispanic-to-White AIR. We also choose the depth = 6 because the 6 is the best choice of the depth.
- 
- 
+
+The relationship of three factors the Training AUC, the Validation AUC, and the Hispanic-to-White AIR. We also choose the depth = 6 because it is the best choice of the depth.
+  
 ## Ethical considerations 
+
 * **Describe potential negative impacts of using your model:**
-    * **Math or software problems**：
-In fact, there are more dimensions to analyze the table, but this time we only analyzed from race and sex. For example, we can introduce education level for analysis.
-    * **Real-world risks(who, what, when or how):**
-According to the results of our analysis, this result has a clear bias for race yy, and in the same situation, whites have higher credit limits than blacks and Hispanic whites. This model may have problems of racial discrimination, and there are greater security and social and moral hidden dangers.<br>
- 
+    * **Math or software problems**: Accuracy is only ~70%. This means we can be wrong up to 30% of the time and this will have high costs.  
+    * **Real-world risks(who, what, when or how):** According to the results of our analysis, there is a clear bias against Hispanic and Black people.<br>
 * **Describe potential uncertainties relating to the impacts of using your mode.**
-    * **Math or software problems**
-Even though after we change the cutoff the AUC and AIR values in this model are already higher than 0.8 but most of the data are between 0.8-0.9, the reliability of the data can continue to improve.<br>
-    * **Real-world risks(who, what, when or how?)：**
-Like other models, this model also has major overall problems. If the analysis logic of the model is obtained once attacked by hackers or other personnel, a higher credit limit can be obtained by predicting the results of the model in advance, which will give Society and banks cause huge losses.<br>
-* **Describe any unexpected or results**：
-I don't know why AIC can be fixed by doing a modification cutoff.
+    * **Math or software problems**: We never know how the model will perfoirm in the future, and it needs to be monitored.<br>
+    * **Real-world risks(who, what, when or how?)：** This model was not tested for privacy and security issues. <br>
+* **Describe any unexpected or results**： The training data contained no missing values, which is surprising. Also, `PAY_0` appeared too important for a stable model.

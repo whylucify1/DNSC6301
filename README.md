@@ -10,8 +10,8 @@ Haoyang Wang, haoyang.wang@gmail.com <br>
 
 ## Intended Use
 * <strong>Primary intended uses:</strong> This model is an example probability of default classifier, with an example use case for determining eligibility for a credit line increase.<br>
-* **Primary intended users:** The profosser Jphnston Hall.<br>
-* **Out-of-scope use cases:** Only use for profosser to check my assignment.<br>
+* **Primary intended users:** The profosser Jphnston Hall and writer Haoyang Wang .<br>
+* **Out-of-scope use cases:** Any use beyond an educational example is out-of-scope.<br>
 ## Training Data
 
 * Data dictionary: 
